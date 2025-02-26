@@ -1,0 +1,21 @@
+@if (IsVisible)
+{
+    <div class="alert alert-warning alert-dismissible fade show text-center p-2 m-0" role="alert">
+        <p class="m-0">This is a Demo
+            <a href="https://github.com/tonyruizo" target="_blank">
+                <i
+                    class="bi bi-github"></i></a></p>
+        <button type="button" class="btn-close pt-0" @onclick="DismissAlert" aria-label="Close"></button>
+    </div>
+}
+
+@code {
+    private bool IsVisible { get; set; } = true;
+
+    private void DismissAlert()
+    {
+        IsVisible = false;
+    }
+
+}
+

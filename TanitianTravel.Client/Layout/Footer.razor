@@ -1,0 +1,21 @@
+<div class="row text-center m-0">
+    <div class="col-12 footer-links pt-5">
+        <a href="/">Home</a>
+        <a href="/explore">Explore</a>
+        <a href="/planning">Planning</a>
+        <a href="/contact">Contact</a>
+    </div>
+    <div class="col-12 pt-5">
+        <a class="footer-brand text-info" href="/" style="font-size: 1.5rem;">
+            Taniti Tourism
+        </a>
+    </div>
+    <div class="col-12 py-3">
+        <p>Images sourced from Unsplash. Photo credits available upon request.</p>
+        <p>&copy; @_currentYear Taniti Tourism. All rights reserved.</p>
+    </div>
+</div>
+
+@code {
+    private readonly int _currentYear = DateTime.Now.Year;
+}

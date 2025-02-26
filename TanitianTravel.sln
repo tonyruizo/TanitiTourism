@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TanitianTravel.Client", "TanitianTravel.Client\TanitianTravel.Client.csproj", "{67EBC92A-5F0A-42D0-B0EE-23F261782199}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{67EBC92A-5F0A-42D0-B0EE-23F261782199}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67EBC92A-5F0A-42D0-B0EE-23F261782199}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67EBC92A-5F0A-42D0-B0EE-23F261782199}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67EBC92A-5F0A-42D0-B0EE-23F261782199}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
