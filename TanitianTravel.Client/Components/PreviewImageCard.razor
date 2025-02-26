@@ -1,0 +1,19 @@
+<div class="col-md-6 col-lg-3">
+    <div class="image-container">
+        <NavLink href="@Link">
+            <img src="@Source"
+                 alt="@Alt">
+            <div class="overlay">@Text</div>
+        </NavLink>
+    </div>
+</div>
+
+@code {
+
+    // Get and update/set values = (default values for user experience and null errors)
+    [Parameter] public string Link { get; set; } = "/";
+    [Parameter] public string Source { get; set; } = "images/placeholder-image.webp";
+    [Parameter] public string Alt { get; set; } = "Image placeholder";
+    [Parameter] public string Text { get; set; } = "Not available";
+
+}
