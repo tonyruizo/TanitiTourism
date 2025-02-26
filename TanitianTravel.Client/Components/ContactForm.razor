@@ -1,44 +1,55 @@
 @using System.ComponentModel.DataAnnotations
 @code {
     private readonly ContactFormModel _formModel = new();
+    private bool _showSuccessMessage = false;
 
     [Parameter] public EventCallback<ContactFormModel> OnFormSubmit { get; set; }
 
     private async Task HandleSubmit()
     {
-        // Trigger the parent event when the form is submitted
-        await OnFormSubmit.InvokeAsync(_formModel);
+        // Show Success
+        _showSuccessMessage = true;
+
+        // Remove after 3 seconds
+        await Task.Delay(3000);
+        _showSuccessMessage = false;
     }
 
 }
 
 <EditForm Model="@_formModel" OnValidSubmit="HandleSubmit">
     <DataAnnotationsValidator/>
-    <ValidationSummary/>
-
     <div class="mb-3">
         <label for="name" class="form-label">Full Name</label>
-        <InputText id="name" class="form-control" @bind-Value="_formModel.Name" required/>
+        <InputText id="name" class="form-control" @bind-Value="_formModel.Name"/>
         <ValidationMessage For="@(() => _formModel.Name)"/>
     </div>
 
     <div class="mb-3">
         <label for="email" class="form-label">Email Address</label>
         <InputText id="email" class="form-control" @bind-Value="_formModel.Email" type="email"
-                   required/>
+        />
         <ValidationMessage For="@(() => _formModel.Email)"/>
     </div>
 
     <div class="mb-3">
         <label for="message" class="form-label">Message</label>
         <InputTextArea id="message" class="form-control" @bind-Value="_formModel.Message" rows="4"
-                       required/>
+        />
         <ValidationMessage For="@(() => _formModel.Message)"/>
     </div>
 
     <button type="submit" class="btn btn-outline-info text-dark my-3">Submit</button>
+
+    @* Success message *@
+    @if (_showSuccessMessage)
+    {
+        <div class="alert alert-success mt-3 text-center" role="alert">
+            Message Sent! We will reach out as soon as possible.
+        </div>
+    }
 </EditForm>
- 
+
 
 @code {
 
