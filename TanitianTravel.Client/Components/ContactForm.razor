@@ -1,7 +1,8 @@
 @using System.ComponentModel.DataAnnotations
 @code {
-    private readonly ContactFormModel _formModel = new();
+    private ContactFormModel _formModel = new();
     private bool _showSuccessMessage = false;
+    private string _name = "";
 
     [Parameter] public EventCallback<ContactFormModel> OnFormSubmit { get; set; }
 
@@ -10,8 +11,14 @@
         // Show Success
         _showSuccessMessage = true;
 
-        // Remove after 3 seconds
-        await Task.Delay(3000);
+        // Retrieve contact name 
+        _name = _formModel.Name;
+
+        // Reset fields
+        _formModel = new ContactFormModel();
+
+        // Remove after 4 seconds
+        await Task.Delay(4000);
         _showSuccessMessage = false;
     }
 
@@ -45,7 +52,7 @@
     @if (_showSuccessMessage)
     {
         <div class="alert alert-success mt-3 text-center" role="alert">
-            Message Sent! We will reach out as soon as possible.
+            Thanks @_name! We will reach out as soon as possible.
         </div>
     }
 </EditForm>
@@ -53,13 +60,15 @@
 
 @code {
 
+    // Contact Form class
     public class ContactFormModel
     {
         [Required(ErrorMessage = "Please enter your full name.")]
         public string Name { get; set; } = string.Empty;
 
         [Required(ErrorMessage = "Please enter a valid email address.")]
-        [EmailAddress(ErrorMessage = "Invalid email format.")]
+        [RegularExpression(@"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$",
+            ErrorMessage = "Invalid email format.")]
         public string Email { get; set; } = string.Empty;
 
         [Required(ErrorMessage = "Please enter your message.")]
