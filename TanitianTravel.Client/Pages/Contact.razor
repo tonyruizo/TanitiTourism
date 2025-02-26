@@ -1,5 +1,36 @@
 @page "/Contact"
+@using TanitianTravel.Client.Components
+
 <PageTitle>Taniti Tourism - Contact Us</PageTitle>
+
+<IntroSection Title="About The Island"
+              Intro="Have questions about your trip to Taniti? Reach out to us for travel assistance, booking support, 
+              and general inquiries. We are here to help you plan the perfect island getaway!">
+    <div class="py-3">
+        <p><strong>Phone:</strong> <a href="tel:+1234567890">(123) 456-7890</a></p>
+        <p><strong>Email:</strong> <a href="mailto:contact@tanititourism.com">contact@tanititourism.com</a></p>
+    </div>
+</IntroSection>
+
+
+<section class="pb-3">
+    <div class="container">
+        <div class="row pb-5">
+            <!-- Left side image -->
+            <div class="col-md-6">
+                <div class="contact-img">
+                    <img src="images/solen-feyissa-LBNJi8qHIbA-unsplash.jpg"
+                         alt="black samsung android smartphone on black textile">
+                </div>
+            </div>
+
+            <!-- Right side form -->
+            <div class="col-md-6">
+                <ContactForm></ContactForm>
+            </div>
+        </div>
+    </div>
+</section>
 
 @code {
 

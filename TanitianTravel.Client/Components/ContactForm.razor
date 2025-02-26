@@ -1,0 +1,58 @@
+@using System.ComponentModel.DataAnnotations
+@code {
+    private readonly ContactFormModel _formModel = new();
+
+    [Parameter] public EventCallback<ContactFormModel> OnFormSubmit { get; set; }
+
+    private async Task HandleSubmit()
+    {
+        // Trigger the parent event when the form is submitted
+        await OnFormSubmit.InvokeAsync(_formModel);
+    }
+
+}
+
+<EditForm Model="@_formModel" OnValidSubmit="HandleSubmit">
+    <DataAnnotationsValidator/>
+    <ValidationSummary/>
+
+    <div class="mb-3">
+        <label for="name" class="form-label">Full Name</label>
+        <InputText id="name" class="form-control" @bind-Value="_formModel.Name" required/>
+        <ValidationMessage For="@(() => _formModel.Name)"/>
+    </div>
+
+    <div class="mb-3">
+        <label for="email" class="form-label">Email Address</label>
+        <InputText id="email" class="form-control" @bind-Value="_formModel.Email" type="email"
+                   required/>
+        <ValidationMessage For="@(() => _formModel.Email)"/>
+    </div>
+
+    <div class="mb-3">
+        <label for="message" class="form-label">Message</label>
+        <InputTextArea id="message" class="form-control" @bind-Value="_formModel.Message" rows="4"
+                       required/>
+        <ValidationMessage For="@(() => _formModel.Message)"/>
+    </div>
+
+    <button type="submit" class="btn btn-outline-info text-dark my-3">Submit</button>
+</EditForm>
+ 
+
+@code {
+
+    public class ContactFormModel
+    {
+        [Required(ErrorMessage = "Please enter your full name.")]
+        public string Name { get; set; } = string.Empty;
+
+        [Required(ErrorMessage = "Please enter a valid email address.")]
+        [EmailAddress(ErrorMessage = "Invalid email format.")]
+        public string Email { get; set; } = string.Empty;
+
+        [Required(ErrorMessage = "Please enter your message.")]
+        public string Message { get; set; } = string.Empty;
+    }
+
+}

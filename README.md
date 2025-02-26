@@ -1,6 +1,10 @@
 # Tanitian Website Prototype
 
-Most of the text content is provided by WGU, but I've added additional text for the demo. Originally an HTML/CSS Prototype for the class submittion, later transformed this into a Blazor App and made few changes along the way for the user and my personal experience. This website is deployed on Azure Static Web Apps.
+Most of the text content is provided by WGU, but I've added additional text for the demo. 
+
+Originally an HTML/CSS Prototype for the class submittion, later transformed this into a Blazor App and made few changes along the way for the user and my personal experience. 
+
+This website is deployed on Azure Static Web Apps.
 
 ## Features
 

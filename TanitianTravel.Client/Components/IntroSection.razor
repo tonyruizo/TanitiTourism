@@ -1,0 +1,19 @@
+<section>
+    <div class="container text-center my-5 py-5">
+        <h2>@Title</h2>
+        <p>@Intro</p>
+
+        @if (ChildContent != null)
+        {
+            <div class="extra-content">
+                @ChildContent
+            </div>
+        }
+    </div>
+</section>
+
+@code {
+    [Parameter] public string Title { get; set; } = "Default Tile";
+    [Parameter] public string Intro { get; set; } = "Default Intro";
+    [Parameter] public RenderFragment? ChildContent { get; set; }
+}
