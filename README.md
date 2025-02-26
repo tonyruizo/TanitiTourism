@@ -1,20 +1,19 @@
 # Tanitian Website Prototype
 
-Most of the text content is provided by WGU, but I've added additional text for the demo. 
+Most of the text content is provided by WGU, but I've added additional text for the demo.
 
-Originally an HTML/CSS Prototype for the class submittion, later transformed this into a Blazor App and made few changes along the way for the user and my personal experience. 
+Originally an HTML/CSS Prototype for the class submittion, later transformed this into a Blazor App and made few changes along the way for the user and my personal experience.
 
 This website is deployed on Azure Static Web Apps.
 
 ## Features
 
-- Component-based UI with Blazor.
+- Component-based UI, and Forms with Blazor.
 
 ## Tech Stack
 
 - Blazor WebAssembly
-- C#
-- CSS, Bootstrap
+- C#, CSS, Bootstrap
 
 ## Trademarks
 
