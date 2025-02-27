@@ -11,8 +11,13 @@
 }
 
 @code {
+    /// <summary>
+    /// Determines whether the alert is visible.
+    /// </summary>
     private bool IsVisible { get; set; } = true;
-
+    /// <summary>
+    /// Hides the alert by setting <see cref="IsVisible"/> to false.
+    /// </summary>
     private void DismissAlert()
     {
         IsVisible = false;
