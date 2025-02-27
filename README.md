@@ -1,26 +1,26 @@
-# Tanitian Website Prototype
+# Taniti Tourism
 
-*I created this project for a User Experience Design Class.*
+*A project for a User Experience Design Class.*
 
 ****Steps Taken:****
 
 1. Persona Profile Research & Creation
 2. Wireframing & Flow Diagram using **Figma**
 3. Created the Prototype for the design and usability using HTML and CSS
-4. Guerrilla Usability Testing with three users to evaluate a product
+4. Guerrilla Usability Testing with *three users* to evaluate a product
 5. Made changes according to the feedback if they were actionable
-6. Created five usability tasks for three peers to test
+6. Created five usability tasks for *three peers* to test
 7. Applied changes according to peers' reviews, feedback and task results
-
-Most of the text content is provided by WGU, but I have added additional text for the demonstration.
 
 > After submitting the HTML/CSS Prototype, I decided to recreate the website and expand on it using the front-end web framework **Blazor** from the **.NET platform**. I made a few improvements and added features outside the scope of the project's requirements for the user and my personal experience.
 
-**This website is deployed on Azure Static Web Apps.**
+** *Most of the text content is provided by WGU, but I have added additional text for the demonstration*.
 
 ## Features
 
 - Component-based UI, and Forms with Blazor.
+- Azure Static Web Apps Deployment
+- CI/CD with GitHub Actions
 
 ## Tech Stack
 
