@@ -1,6 +1,10 @@
 # Taniti Tourism
 
-*A project for a User Experience Design Class.*
+*A project for a User Experience Design Class.* 
+
+Live Demo: https://wonderful-flower-0665c7b1e.6.azurestaticapps.net/
+
+<br>
 
 ****Steps Taken:****
 
@@ -16,16 +20,22 @@
 
 ** *Most of the text content is provided by WGU, but I have added additional text for the demonstration*.
 
+<br>
+
 ## Features
 
 - Component-based UI, and Forms with Blazor.
 - Azure Static Web Apps Deployment
 - CI/CD with GitHub Actions
 
+<br>
+
 ## Tech Stack
 
 - Blazor WebAssembly
 - C#, HTML, CSS, Bootstrap
+
+<br>
 
 ## Trademarks
 
