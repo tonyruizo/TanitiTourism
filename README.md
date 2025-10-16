@@ -2,11 +2,13 @@
 
 This business landing website was built for a User Experience Design class project.
 
+> **Note:**
+> The project idea originates from my course at the university.
+> My task is to completely build the project from the gathered requirements, and pass the evaluation. 
+
+<br>
+
 Live Demo: https://wonderful-flower-0665c7b1e.6.azurestaticapps.net/
-
-> After submitting the HTML/CSS Prototype project, I decided to recreate the website and expand on it using the front-end web framework **Blazor** from the **.NET platform**. I made a few improvements and added features outside the scope of the project's requirements for the user and my personal experience.
-
-** *Most of the text content is provided by WGU, but I have added additional text for the demonstration*.
 
 <br>
 
@@ -19,6 +21,8 @@ Live Demo: https://wonderful-flower-0665c7b1e.6.azurestaticapps.net/
 5. Made changes according to the feedback if they were actionable
 6. Created five usability tasks for *three peers* to test
 7. Applied changes according to peers' reviews, feedback and task results
+
+<br>
 
 > After submitting the HTML/CSS Prototype, I decided to recreate the website and expand on it using the front-end web
 > framework **Blazor** from the **.NET platform**. I made a few improvements and added features outside the scope of the
